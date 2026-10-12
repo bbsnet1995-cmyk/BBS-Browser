@@ -28,5 +28,5 @@ android {
 
 dependencies {
     implementation("androidx.activity:activity-ktx:1.9.3")
-    implementation("org.mozilla.geckoview:geckoview:140.0")
+    implementation("org.mozilla.geckoview:geckoview:140.0.20250707120347")
 }

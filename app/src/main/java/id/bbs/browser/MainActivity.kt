@@ -1,7 +1,6 @@
-
 package id.bbs.browser
 
-import android.app.Activity
+import androidx.activity.ComponentActivity
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
@@ -20,7 +19,7 @@ import org.mozilla.geckoview.WebExtensionController
 import java.io.File
 import java.io.FileOutputStream
 
-class MainActivity : Activity() {
+class MainActivity : ComponentActivity() {
     private val green = Color.rgb(25, 145, 100)
     private val blue = Color.rgb(29, 104, 190)
     private val aqua = Color.rgb(31, 190, 190)
@@ -37,7 +36,7 @@ class MainActivity : Activity() {
 
     private val extensionPicker = registerForActivityResult(
         ActivityResultContracts.OpenDocument()
-    ) { uri ->
+    ) { uri: Uri? ->
         if (uri != null) installExtensionFromDevice(uri)
     }
 
